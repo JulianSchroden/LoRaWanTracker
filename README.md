@@ -3,12 +3,12 @@ GPS tracker which transmits its location via LoRaWan to the [The Things Network]
 
 ## Table of contents
 <!-- toc -->
-- [Setup](#Setup)
-   * [Used components](#Used-components)
-   * [Pinout](#Pinout)
-   * [Required Libraries](#Required-libraries)
-- [Usage](#Usage)
-- [Suggestions](#Suggestions)
+- [Setup](#setup)
+   * [Used components](#used-components)
+   * [Pinout](#pinout)
+   * [Required Libraries](#required-libraries)
+- [Usage](#usage)
+- [Suggestions](#suggestions)
 <!-- tocstop -->
 
 
