@@ -32,9 +32,151 @@ GPS tracker which transmits its location via LoRaWan to the [The Things Network]
 
 
 ###  Pinout
-![LoRaWanMapper Pinout](doc/Pinout.png "LoRaWanMapper Pinout")
+<table>
+  <tr>
+    <th align="center">Module</th>
+    <th align="center" colspan="2">ESP32</th>
+    <th align="center">Module</th>
+  </tr>
+  <tr>
+    <td align="center">3.3V (A)</td>
+    <td align="center">3.3V</td>
+    <td align="center">GND</td>
+    <td align="center">GND (A)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">EN</td>
+    <td align="center">GPIO23 MOSI</td>
+    <td align="center">MOSI (L)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO36</td>
+    <td align="center">GPIO22 SCL</td>
+    <td align="center">SCL (D)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO39</td>
+    <td align="center">GPIO1 TX0</td>
+    <td align="center"></td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO34</td>
+    <td align="center">GPIO3 RX0</td>
+    <td align="center"></td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO35</td>
+    <td align="center">GPIO21 SDA</td>
+    <td align="center">SDA (D)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO32</td>
+    <td align="center">GND</td>
+    <td align="center"></td>
+  </tr>
+  <tr>
+    <td align="center">CLK (R)</td>
+    <td align="center">GPIO33</td>
+    <td align="center">GPIO19 MISO</td>
+    <td align="center">MISO (L)</td>
+  </tr>
+  <tr>
+    <td align="center">DT (R)</td>
+    <td align="center">GPIO25</td>
+    <td align="center">GPIO18 SCK</td>
+    <td align="center">SCK (L)</td>
+  </tr>
+  <tr>
+    <td align="center">SW (R)</td>
+    <td align="center">GPIO26</td>
+    <td align="center">GPIO5 SS</td>
+    <td align="center">RST (L)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO27</td>
+    <td align="center">GPIO17</td>
+    <td align="center">RX (G)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO14</td>
+    <td align="center">GPIO16</td>
+    <td align="center">TX (G)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO12</td>
+    <td align="center">GPIO4</td>
+    <td align="center"></td>
+  </tr>
+  <tr>
+    <td align="center">Power source -</td>
+    <td align="center">GND</td>
+    <td align="center">GPIO0</td>
+    <td align="center"></td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO13</td>
+    <td align="center">GPIO2</td>
+    <td align="center">G0 (L)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO9</td>
+    <td align="center">GPIO15</td>
+    <td align="center">G1 (L)</td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO10</td>
+    <td align="center">GPIO8</td>
+    <td align="center"></td>
+  </tr>
+  <tr>
+    <td align="center"></td>
+    <td align="center">GPIO11</td>
+    <td align="center">GPIO7</td>
+    <td align="center"></td>
+  </tr>
+  <tr>
+    <td align="center">Power source +</td>
+    <td align="center">5V</td>
+    <td align="center">GPIO6</td>
+    <td align="center"></td>
+  </tr>
+</table>
 
-
+#### Abbreviations:
+<table>
+  <tr>
+    <td>A</td>
+    <td>All modules</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>Display</td>
+  </tr>
+  <tr>
+    <td>G</td>
+    <td>GPS module</td>
+  </tr>
+  <tr>
+    <td>L</td>
+    <td>LoRa transceiver</td>
+  </tr>
+   <tr>
+    <td>R</td>
+    <td>Rotary encoder</td>
+  </tr>
+</table>
 
 ### Required libraries
 |Library name                             | Source                                                          |
