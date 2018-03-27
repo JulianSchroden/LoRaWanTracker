@@ -3,8 +3,9 @@ GPS tracker which transmits its location via LoRaWan to the [The Things Network]
 
 <p align="center">
   <img src="doc/LoRaWanTracker.jpg" width="66%"/>
+  <p align="center"><em>The current setup of the LoRaWanTracker</em></p>
 </p>
-*<p align="center">The current setup of the LoRaWanTracker</p>*
+
 The LoRaWanTracker was created to ease the process of range testing as it allows to set transmit parameters like the data rate or interval during runtime. A small OLED display is used to draw the UI and thanks to the rotary encoder a user can interact with it. 
 
 
