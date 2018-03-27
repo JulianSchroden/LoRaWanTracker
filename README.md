@@ -1,24 +1,30 @@
 # LoRaWanTracker
 GPS tracker which transmits its location via LoRaWan to the [The Things Network](https://www.thethingsnetwork.org/).
 
-
-![LoRaWanMapper](doc/LoRaWanTracker.jpg "LoRaWanMapper")
+<p align="center">
+  <img src="doc/LoRaWanTracker.jpg" width="66%"/>
+</p>
 *<p align="center">The current setup of the LoRaWanTracker</p>*
+The LoRaWanTracker was created to ease the process of range testing as it allows to set transmit parameters like the data rate or interval during runtime. A small OLED display is used to draw the UI and thanks to the rotary encoder a user can interact with it. 
+
 
 
 ## Table of contents
 <!-- toc -->
 - [Setup](#setup)
-   * [Used components](#used-components)
-   * [Pinout](#pinout)
-   * [Required Libraries](#required-libraries)
+   * [Hardware](#hardware)
+   * [Software](#software)
 - [Usage](#usage)
 - [Suggestions](#suggestions)
 <!-- tocstop -->
 
 
 ## Setup
-### Used components
+
+
+### Hardware
+
+
 |Component name                                                   | Source                                                                                                                         |
 |:----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 |ESP32 Development Board                                          |[Amazon.de](https://www.amazon.de/AZDelivery-NodeMCU-Development-Nachfolgermodell-ESP8266/dp/B071P98VTG/)                       |
@@ -31,7 +37,9 @@ GPS tracker which transmits its location via LoRaWan to the [The Things Network]
 |Step-Up Voltage Converter 1-5V to 5V                             |[Amazon.de](https://www.amazon.de/Boost-Converter-DC-DC-Step-Up-Arduino/dp/B01MSWNF05/)                                         |
 
 
-###  Pinout
+Connecting the hardware to the ESP32 board is straightforward because it offers all necessary interfaces and every component is compatible with the 3.3V voltage level. The modules are connected to the microcontroller as shown in the table below.
+
+####  Pinout
 <table>
   <tr>
     <th align="center">Module</th>
@@ -154,7 +162,7 @@ GPS tracker which transmits its location via LoRaWan to the [The Things Network]
   </tr>
 </table>
 
-#### Abbreviations:
+##### Abbreviations:
 <table>
   <tr>
     <td>A</td>
@@ -178,7 +186,17 @@ GPS tracker which transmits its location via LoRaWan to the [The Things Network]
   </tr>
 </table>
 
-### Required libraries
+## Software
+The Arduino software makes use of the [Arduino core for ESP32 project](https://github.com/espressif/arduino-esp32) and numerous libraries listed below. I use [Visual Studio Code](https://code.visualstudio.com/) with the [PlatformIO plugin](http://docs.platformio.org/en/latest/ide/vscode.html) to maintain the project.
+
+If you want to set up the project on your own computer, you can follow these steps:
+- ([Install Visual Studio Code and the PlatformIO plugin](http://docs.platformio.org/en/latest/ide/vscode.html))
+- Install the [Espressif 32 Platform](https://github.com/platformio/platform-espressif32).
+- Clone or download this repository into your working directory.
+- Download the required libraries through the library manager of PlatformIO or download and unzip them into the lib folder on your own.
+
+
+#### Required libraries
 |Library name                             | Source                                                          |
 |:----------------------------------------|:----------------------------------------------------------------|
 |Adafruit-GFX-Library                     |<https://github.com/adafruit/Adafruit-GFX-Library>               |
@@ -189,8 +207,11 @@ GPS tracker which transmits its location via LoRaWan to the [The Things Network]
 
 
 ## Usage
-
+//TODO
 
 
 ## Suggestions
-
+The LoRaWanTracker could be improved by:
+- Adding a larger screen
+- Replacing the non-rechargeable battery with a rechargeable one
+- Adding a 3D printed housing
