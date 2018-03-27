@@ -1,6 +1,11 @@
 # LoRaWanTracker
 GPS tracker which transmits its location via LoRaWan to the [The Things Network](https://www.thethingsnetwork.org/).
 
+
+![LoRaWanMapper](doc/LoRaWanTracker.jpg "LoRaWanMapper")
+*<p align="center">The current setup of the LoRaWanTracker</p>*
+
+
 ## Table of contents
 <!-- toc -->
 - [Setup](#setup)
@@ -27,7 +32,8 @@ GPS tracker which transmits its location via LoRaWan to the [The Things Network]
 
 
 ###  Pinout
-//TODO: Upload and link image
+![LoRaWanMapper Pinout](doc/Pinout.png "LoRaWanMapper Pinout")
+
 
 
 ### Required libraries
