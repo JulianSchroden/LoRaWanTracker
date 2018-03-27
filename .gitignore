@@ -8,3 +8,4 @@ lib/Adafruit_SSD1306/
 lib/Adafruit-GFX-Library/
 lib/arduino-lmic-testing/
 lib/TinyGPSPlus-1.0.2/
+src/loraConfig.h
