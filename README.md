@@ -1,5 +1,5 @@
 # LoRaWanTracker
-GPS tracker which transmits its location via LoRaWan to the [The Things Network](https://www.thethingsnetwork.org/).
+GPS tracker which transmits its location via LoRaWan to the [The Things Network (TTN)](https://www.thethingsnetwork.org/).
 
 <p align="center">
   <img src="doc/LoRaWanTracker.jpg" width="66%"/>
@@ -187,7 +187,7 @@ Connecting the hardware to the ESP32 board is straightforward because it offers 
   </tr>
 </table>
 
-## Software
+### Software
 The Arduino software makes use of the [Arduino core for ESP32 project](https://github.com/espressif/arduino-esp32) and numerous libraries listed below. I use [Visual Studio Code](https://code.visualstudio.com/) with the [PlatformIO plugin](http://docs.platformio.org/en/latest/ide/vscode.html) to maintain the project.
 
 If you want to set up the project on your own computer, you can follow these steps:
@@ -195,7 +195,7 @@ If you want to set up the project on your own computer, you can follow these ste
 - Install the [Espressif 32 Platform](https://github.com/platformio/platform-espressif32).
 - Clone or download this repository into your working directory.
 - Download the required libraries through the library manager of PlatformIO or download and unzip them into the lib folder on your own.
-
+- Uncomment `#define SSD1306_128_64` in [Adafruit_SSD1306.h#73](https://github.com/adafruit/Adafruit_SSD1306/blob/ddfec78fa15f0ff8dfc8a76524077ba6bb5fc6f3/Adafruit_SSD1306.h#L73) and comment out the line below. That way the appropriate display resolution is set.
 
 #### Required libraries
 |Library name                             | Source                                                          |
@@ -206,6 +206,8 @@ If you want to set up the project on your own computer, you can follow these ste
 |Arduino-LMIC library (slightly modified) |<https://github.com/JulianSchroden/arduino-lmic/tree/testing>    |
 |activity-runtime-for-arduino             |<https://github.com/JulianSchroden/activity-runtime-for-arduino> |
 
+#### Device registration
+Visit the TTN console, add a new application to your account and register a new device.  Now you can change the credentials in [src/loraConfig.h](src/loraConfig.h) with the keys of your device. Afterwards, you only need to build and upload the code to your ESP32 and you are ready to go.
 
 ## Usage
 //TODO
