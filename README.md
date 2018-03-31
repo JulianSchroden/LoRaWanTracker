@@ -207,11 +207,36 @@ If you want to set up the project on your own computer, you can follow these ste
 |activity-runtime-for-arduino             |<https://github.com/JulianSchroden/activity-runtime-for-arduino> |
 
 #### Device registration
-Visit the TTN console, add a new application to your account and register a new device.  Now you can change the credentials in [src/loraConfig.h](src/loraConfig.h) with the keys of your device. Afterwards, you only need to build and upload the code to your ESP32 and you are ready to go.
+Visit the TTN console, add a new application to your account and register a new device. Now you can replace the credentials in [src/loraConfig.h](src/loraConfig.h) with your keys. Afterwards, you only need to build and upload the code to your ESP32 and you are ready to go.
 
 ## Usage
-//TODO
+After powering up the LoRaWanTracker, the main screen is started. Turn the rotary encoder to choose, whether you want to use OTAA (Over The Air Activation), or ABP (Activation by Personalization) to register your device.  
 
+<p align="center">
+  <img src="doc/MainActivity.jpg" alt="MainActivity" width="50%"/>
+</p>
+
+When you press the integrated pushbutton the mode is selected, and the setup screen is displayed, which shows the transmission settings as a scrollable list.
+
+<p align="center">
+  <img src="doc/SetupActivity.jpg" alt="SetupActivity" width="50%"/>
+</p>
+
+Scroll through the entries by turning the encoder and push the button to select the attribute you want to modify. A screen is started as a result which lets you pick the attribute's value.
+
+<p align="center">
+  <img src="doc/dataRateChooserActivity.jpg" alt="DataRateChooserActivity" width="50%"/>
+</p>
+
+After you have selected the desired value, you can go back to the setup screen by pressing the button for 1 second. 
+Navigate to the "start" entry at the bottom of the setup screen when you are happy with the device settings and push the button once again to start the location transmission screen.
+
+<p align="center">
+  <img src="doc/LoRaTesterActivity.jpg" alt="LoRaTesterActivity" width="50%"/>
+</p>
+
+If you have chosen the OTAA mode, the tracker will try to join the network at first. Afterwards, the display shows the current location and transmission parameters alongside the seconds since the last and till the next message.
+From now on the tracker will transmit its location continuously until you return to the upper screen (hold button for 1 second) or it is powered off.
 
 ## Suggestions
 The LoRaWanTracker could be improved by:
